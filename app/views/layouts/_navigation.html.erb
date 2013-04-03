@@ -1,13 +1,28 @@
 <ul class="nav">
   <li>
-    <%= link_to "Postit!", root_path, :class => 'brand' %>
+    <%= link_to "Gellos Capital", root_path, :class => 'brand' %>
   </li>
 
 <% if logged_in? %>
 
- <div class='nav_item'>
- 	<%= link_to 'Month', 'posts#index2', class: 'btn btn-small' %>
- 	</div>
+<ul class="nav">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      Previous Months
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <%= link_to 'March', march_path %><br>
+      <%= link_to 'February', february_path %><br>
+      <%= link_to 'January', january_path %><br>
+      <%= link_to 'Current', root_path %><br>
+    </ul>
+  </li>
+</ul>
+
+
+
+
  	   <li>
     <%= link_to 'Logout', logout_path %>
   </li>
@@ -15,9 +30,7 @@
   <li>
     <%= link_to 'Login', login_path %>
   </li>
-    <li>
-    <%= link_to 'Register', register_path %>
-  </li>
+
 
 
  	<% end %>

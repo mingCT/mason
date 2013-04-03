@@ -5,7 +5,9 @@ Postit::Application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'
-   get '/gellos', to: 'gellos#index'
+   get '/march', to: 'posts#march'
+   get '/february', to: 'posts#february'
+   get '/january', to: 'posts#january'
 
   resources :posts, except: [:delete] do
   	member do
