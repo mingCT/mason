@@ -8,6 +8,7 @@ Postit::Application.routes.draw do
    get '/march', to: 'posts#march'
    get '/february', to: 'posts#february'
    get '/january', to: 'posts#january'
+   get '/total', to: 'posts#total'
 
   resources :posts, except: [:delete] do
   	member do
