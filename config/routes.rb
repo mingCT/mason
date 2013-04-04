@@ -1,7 +1,7 @@
 Postit::Application.routes.draw do
   root to: 'posts#index'
 
-  get '/register', to: 'users#new', as: 'register'
+  get '/register', to: 'users#xxx', as: 'register'
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'
@@ -9,6 +9,12 @@ Postit::Application.routes.draw do
    get '/february', to: 'posts#february'
    get '/january', to: 'posts#january'
    get '/total', to: 'posts#total'
+   get '/greg', to: 'posts#greg'
+   get '/phil', to: 'posts#phil'
+   get '/mike', to: 'posts#mike'
+   get '/tom', to: 'posts#tom'
+   get '/ryan', to: 'posts#ryan'
+   get '/omar', to: 'posts#omar'
 
   resources :posts, except: [:delete] do
   	member do
