@@ -15,7 +15,7 @@ Postit::Application.routes.draw do
    get '/tom', to: 'posts#tom'
    get '/ryan', to: 'posts#ryan'
    get '/omar', to: 'posts#omar'
-
+   get '/ytd', to: 'posts#ytd'
   resources :posts, except: [:delete] do
   	member do
   		post 'vote'
